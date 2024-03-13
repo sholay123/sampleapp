@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% block body %}
+        <form action="{% url 'addStudent' %}" method="POST">
+            <b>Student Name:</b>
+            <input type="text" name="sname"/>
+            <br>
+            <b>Course Name:</b>
+            <input type="text" name="course"/>
+            <br>
+            <b>Student Fees:</b>
+            <input type="text" name="fees"/>
+            <br>
+            <input type="submit" value="ADD STUDENT">
+        </form>
+    {% endblock %}
+</body>
+</html>
