@@ -1,0 +1,10 @@
+Feature: Product Management
+  As a store owner
+  I want to update product information
+  So that customers can view accurate details
+
+  Scenario: Update an existing product
+    Given there is an existing product with ID "123" and name "Old Product" and price "50"
+    When I update the product information with ID "123" and name "New Product" and price "60"
+    Then the product information should be updated successfully
+    And I should be able to view the updated product details with ID "123" and name "New Product" and price "60"
